@@ -1,0 +1,100 @@
+{
+  "name": "git-stage",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duniul/vscode-git-stage.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "icon": "./resources/icons/git-stage.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "tsc -p ./",
+    "dev": "tsc -watch -p ./",
+    "lint": "rome check src",
+    "lint:fix": "rome check src --apply-suggested",
+    "format": "rome format src --write"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.76.0",
+    "@types/node": "^18",
+    "prettier": "^2.8.7",
+    "rome": "^11.0.0",
+    "typescript": "^5.0.2"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-stage.stageCurrentFile",
+        "title": "%command.stageCurrentFile%",
+        "category": "Git",
+        "enablement": "!operationInProgress"
+      },
+      {
+        "command": "git-stage.unstageCurrentFile",
+        "title": "%command.unstageCurrentFile%",
+        "category": "Git",
+        "enablement": "!operationInProgress"
+      },
+      {
+        "command": "git-stage.stageSelectedFiles",
+        "title": "%command.stageSelectedFiles%",
+        "category": "Git",
+        "enablement": "!operationInProgress"
+      },
+      {
+        "command": "git-stage.unstageSelectedFiles",
+        "title": "%command.unstageSelectedFiles%",
+        "category": "Git",
+        "enablement": "!operationInProgress"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "git-stage.stageCurrentFile",
+          "group": "git",
+          "when": "gitOpenRepositoryCount != 0"
+        },
+        {
+          "command": "git-stage.unstageCurrentFile",
+          "group": "git",
+          "when": "config.git.enabled && !git.missing && gitOpenRepositoryCount != 0"
+        },
+        {
+          "command": "git-stage.stageSelectedFiles",
+          "group": "git",
+          "when": "false"
+        },
+        {
+          "command": "git-stage.unstageSelectedFiles",
+          "group": "git",
+          "when": "false"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "git-stage.stageSelectedFiles",
+          "group": "git",
+          "when": "config.git.enabled && !git.missing && gitOpenRepositoryCount != 0"
+        },
+        {
+          "command": "git-stage.unstageSelectedFiles",
+          "group": "git",
+          "when": "config.git.enabled && !git.missing && gitOpenRepositoryCount != 0"
+        }
+      ]
+    }
+  }
+}
