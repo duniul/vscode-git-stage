@@ -33,7 +33,7 @@
   "scripts": {
     "vscode:prepublish": "pnpm run build",
     "vscode:package": "vsce package",
-    "vscode:publish": "pnpm run vscode:package && vsce publish",
+    "vscode:publish": "vsce publish",
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "rome check src",
