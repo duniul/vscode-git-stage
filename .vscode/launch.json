@@ -12,12 +12,8 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--disable-extensions",
-				"${workspaceFolder}/../../.."
+				"${workspaceFolder}/.playground"
 			],
-			"env": {
-				"GIT_WORK_TREE": "/Users/daniel",
-				"GIT_DIR": "/Users/daniel/.dotfiles-git"
-			},
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"
 			],
