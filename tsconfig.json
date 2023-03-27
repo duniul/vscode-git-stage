@@ -22,8 +22,8 @@
 
     // custom
     "outDir": "dist",
-    "rootDir": "src",
     "sourceMap": true,
     "checkJs": false
-  }
+  },
+  "include": ["src"]
 }
