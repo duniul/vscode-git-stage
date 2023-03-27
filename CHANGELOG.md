@@ -1,5 +1,7 @@
-# Change Log
+# git-stage
 
 ## 1.0.0
 
-- Initial release
+### Major Changes
+
+- Initial release!
