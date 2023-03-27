@@ -1,10 +1,8 @@
 {
   "displayName": "Git - Stage/unstage specific files",
   "description": "Commands for staging and unstaging specific files from outside the source control window.",
-  "command": {
-    "stageCurrentFile": "Stage Current File",
-    "unstageCurrentFile": "Unstage Current File",
-    "stageSelectedFiles": "Stage Selected Files",
-    "unstageSelectedFiles": "Unstage Selected Files"
-  }
+  "command.stageCurrentFile": "Stage Current File",
+  "command.unstageCurrentFile": "Unstage Current File",
+  "command.stageSelectedFiles": "Stage Selected Files",
+  "command.unstageSelectedFiles": "Unstage Selected Files"
 }
