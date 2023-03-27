@@ -7,6 +7,8 @@
 A VSCode extension for staging/unstaging files without changes from outside of the source control
 window.
 
+<img alt="command-palette-example" src="./resources/images/command-palette.png"></img>
+
 **Table of Contents**
 
 - [Features](#features)
